@@ -80,3 +80,4 @@ update_tmux(){
 
 PROMPT_COMMAND=prompt
 
+eval $(docker-machine env default)
