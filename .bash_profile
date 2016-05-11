@@ -33,7 +33,8 @@ export AWS_CLI=/usr/local/bin/aws
 export IDP_USER=thomas.hammond
 
 source ~/saml-aws-functions/bash-functions
-
+for f in ~/.bash-my-aws/lib/*-functions; do source $f; done
+source ~/.bash-my-aws/bash_completion.sh
 source /usr/local/opt/chruby/share/chruby/chruby.sh
 source /usr/local/opt/chruby/share/chruby/auto.sh
 

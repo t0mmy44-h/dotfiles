@@ -5,4 +5,8 @@ alias docker_clean_containers='docker rm -f $(docker ps -qa)'
 alias docker_clean_running='docker rm -f $(docker ps -qa)'
 alias docker_fix_network='docker-machine ssh default "echo search win.int.realestate.com.au > /et    c/resolv.conf && echo nameserver 10.150.1.10 >>/etc/resolv.conf && echo nameserver 10.129.148.30     >> /etc/resolv.conf && sudo /etc/init.d/docker restart"'
 set -o vi
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+RUBIES=(~/.rubies)
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
