@@ -1,7 +1,7 @@
 source ~/.bashrc
 
 # Path to the bash it configuration
-export BASH_IT="/Users/thomas.hammond/bash-it"
+export BASH_IT="/home/tommy/bash-it"
 
 # Lock and Load a custom theme file
 # location /.bash_it/themes/
