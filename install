@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+# from http://errtheblog.com/posts/89-huba-huba
+
+home = File.expand_path('~')
+ignore = [/LICENSE/, /README.md/, /install/]
+  
+Dir['*'].each do |file|
+  next if file =~ Regexp.union(ignore)
+  target = File.join(home, ".#{file}")
+  `ln -s #{File.expand_path file} #{target}`
+end
+
+# git push on commit
+`echo 'git push' > .git/hooks/post-commit`
+`chmod 755 .git/hooks/post-commit`
